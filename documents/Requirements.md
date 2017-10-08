@@ -26,7 +26,7 @@ To use the web app, you need desktop, laptop or mobile device with installed one
 - Google Chrome (15+)
 
 ### 3.1 Functional Requirements
-####3.1.1 Routing and navigation through web app content
+#### 3.1.1 Routing and navigation through web app content
 
 Routing and navigation through webapp must be implemented by clicking on the correspond section from the navigation bars. After clicking content of correspond section appears on the web page. Must be implemented the following navigation bars:
 
@@ -55,21 +55,21 @@ Routing and navigation through webapp must be implemented by clicking on the cor
 Views of each section is represented in mockups.
 All necessary content for the sections is provided by the institute (text, images, icons, documents).
 
-####3.1.2 Footbar with service information
+#### 3.1.2 Footbar with service information
 Each web page must contain footbar with service information, which is provided by the institute.
 
-####3.1.3 Searching information about publications and the institute staff
+#### 3.1.3 Searching information about publications and the institute staff
 Section Publications must contatin search input with buttons find, clear and combo box for structute with options: 1) Management, 2) Laboratory of Herbology, 3)Laboratory of phytopathology, 4) Laboratory of entomology, 5) Laboratory for protection of fodder and industrial crops, 6) Laboratory for the Protection of Vegetable Crops and Potatoes,
 7) Laboratory of protection of fruit crops, 8) Laboratory of microbiological method of crop protection against pests and diseases, 9) Laboratory of Pesticide Dynamics, 10) Department of Information, 11) Marketing and Patent Studies.
 
 #### 3.1.4 Downloading documents
 In section conferences and publications must be a possibility to download documents by clicking on the correspond download button.
 
-####3.1.5 Table view of products from reference book of the institute 
+#### 3.1.5 Table view of products from reference book of the institute 
 In section Products must be table view of products from reference book of institute with columns: 1) Name, 2) Consumption rate, 3) Culture, 4) Desease, 5) Processing method, 6) Days till last harvest, 7) Multiplicity. Table view must support the following product categories: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators. Before table view must be located form for searching products by name, culture, desease and active substance, with search button. After clicking search button table view must contain only correspond products if there are no corresponding products table view must be empty. Also Table view must contain scroll bar to show all products.
 
-####3.1.6 Storing information about products from reference book of the institute
-All  information about products from reference book of institute must be stored in database.
+#### 3.1.6 Storing information about products from reference book of the institute
+All information about products from reference book of institute must be stored in database.
 
 ### 3.2 Non-Functional Requirements
 
@@ -84,11 +84,11 @@ All  information about products from reference book of institute must be stored 
 
 - The web app must support simultaneously at least 500 users at a time - because there can be issues with responding of web content when there are a lot of users on website. Measures in maximum count of users that can use the web app simultaneously.
 
-####3.2.2 EXTERNAL INTERFACES
+#### 3.2.2 EXTERNAL INTERFACES
 
 - The web application's user interface must support the minimum screen resolution of 1024 * 768 - to see valid content of web app.
 
-####3.2.3 CONSTRAINTS
+#### 3.2.3 CONSTRAINTS
 - Backend of system must be implemented using Java 8 language and Spring Framework of version upper than 4.0.0
 - Frontend of the system must be implemented using CSS framework Twitter Bootstrap of version upper than 3.0.0 and Angular framework.
 - Database must be implemented using RDBMS MySQL of version upper than 5.5
