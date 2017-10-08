@@ -26,7 +26,7 @@ To use the web app, you need desktop, laptop or mobile device with installed one
 - Google Chrome
 
 ### 3.1 Functional Requirements
-3.1.1 Navigation bar on the left side and bottom of each web page with sections (Its content must be on the center of page):
+3.1.1 Navigation bar on the left side of each web page with sections (Its content must be on the center of page):
 
 - Main (one picture on the top of the section and text after).
 - About the Institute (one picture on the center of the section and text before and after it).
@@ -42,15 +42,22 @@ To use the web app, you need desktop, laptop or mobile device with installed one
 
 All necessary content for the sections is provided by the institute (text, images, icons, documents).
 
-3.1.2 On the center side of each page must be located content according section.
+3.1.2 Navigation bar on the top side of each web page with sections (Its content must be on the center of page):
+- Main (one picture on the top of the section and text after).
+- About  (one picture on the center of the section and text before and after it).
+- Researches (only text).
+- Organization (sublist of departments of organization with links to detail description).
+- Contacts (text on the top of the section and gallery with photos after)
 
-3.1.3 On the top of each page must be located picture with background and logo provided by institute.
+3.1.3 On the center side of each page must be located content according section.
 
-3.1.4 Footbar with service information (provided by institute).
+3.1.4 On the top of each page must be located picture with background and logo provided by institute.
 
-3.1.5 Internalization of content in languages: Russian and English.
+3.1.5 Footbar with service information (provided by institute).
 
-3.1.6 Implemention of database using MySQL RDBMS storing information about products from reference book of institute. Support product categories are: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators
+3.1.6 Internalization of content in languages: Russian and English. Implemented by icons on right side of top the navigation bar
+
+3.1.7 Implemention of database using MySQL RDBMS storing information about products from reference book of institute. Support product categories are: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators
 
 ### 3.2 Non-Functional Requirements
 1) Access to the system should be through the HTTPS protocol
@@ -59,4 +66,4 @@ All necessary content for the sections is provided by the institute (text, image
 #### 3.2.1 SOFTWARE QUALITY ATTRIBUTES
 - Performance - people don't wanna wait for many time while web page is loading. To avoid wasting precious time user must wait maximum 1 second to load any page on web app. Measures in time needed to load web page.
 
-- Reability - the web app must be deployed 24 hours per day without troubles to access it. It is important because users must know that they can use resource of web app any time they need it. Measures in count of situations when user can't load web page (this count must be lower that 5 situations per day)
+- Reability - the web app must be deployed 24 hours per day without troubles to access it. Important because users must know that they can use resource of web app any time they need it. Measures count of situations when user can't load web page (this count must be lower that 5 situations per day).
