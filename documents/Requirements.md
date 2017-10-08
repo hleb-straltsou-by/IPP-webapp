@@ -1,6 +1,6 @@
 # Requirements Document 
 ## 1 Introduction
-The designed software is web app represent Republic Scientific Subsidiary Unitary Enterprise "INSTITUTE OF PLANTS PROTECTION". Need to mention that such web app is already existed [INSTITUTE OF PLANTS PROTECTION](http://izr.by/).  The task is to enhance its user interface and backend with modern technologies in order to increase the prestige of the institute in a scientific society and attract more users.
+The designed software is web app represent Republic Scientific Subsidiary Unitary Enterprise "INSTITUTE OF PLANTS PROTECTION". Need to mention that such web app has already existed [INSTITUTE OF PLANTS PROTECTION](http://izr.by/).  The task is to enhance its user interface and backend with modern technologies in order to increase the prestige of the institute in a scientific society and attract more users.
 ## 2 User Requirements
 ### 2.1 Software Interfaces
 #### Used technologies
