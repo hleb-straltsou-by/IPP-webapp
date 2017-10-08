@@ -59,4 +59,4 @@ All necessary content for the sections is provided by the institute (text, image
 #### 3.2.1 SOFTWARE QUALITY ATTRIBUTES
 - Performance - people don't wanna wait for many time while web page is loading. To avoid wasting precious time user must wait maximum 1 second to load any page on web app. Measures in time needed to load web page.
 
-- Reability - the web app must be deployed 24 hours per day without troubles to access it. Important because users must know that they can use resource of web app any time they need it. Measures count of situations when user can't load web page (this count must be lower that 5 situations per day)
+- Reability - the web app must be deployed 24 hours per day without troubles to access it. It is important because users must know that they can use resource of web app any time they need it. Measures in count of situations when user can't load web page (this count must be lower that 5 situations per day)
