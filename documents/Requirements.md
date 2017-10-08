@@ -21,49 +21,74 @@ User interface will provide facilities on the web pages to navigate user through
 ## 3 System Requirements
 To use the web app, you need desktop, laptop or mobile device with installed one of the recommended browsers:
 
-- Yandex
-- Mozilla Firefox
-- Google Chrome
+- Yandex (13+)
+- Mozilla Firefox (20+)
+- Google Chrome (15+)
 
 ### 3.1 Functional Requirements
-3.1.1 Navigation bar on the left side of each web page with sections (Its content must be on the center of page):
+####3.1.1 Routing and navigation through web app content
 
-- Main (one picture on the top of the section and text after).
-- About the Institute (one picture on the center of the section and text before and after it).
-- Direction of researches (only text).
-- Framework of organization (sublist of departments of organization with links to detail description).
-- Young Scientists League (text on the top of the section and gallery with photos after)
-- Phytopathological society (one picture on the center of the section and text before and after it).
-- Publications (search form with options: clear, find, structure)
-- Conferences (text and links for the documents)
-- Contacts (only text)
-- Site map (list of links to the sections of the web app)
-- Product reference book (contains table with product categories: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators)
+Routing and navigation through webapp must be implemented by clicking on the correspond section from the navigation bars. After clicking content of correspond section appears on the web page. Must be implemented the following navigation bars:
 
+1) Detail navigation bar on the each web page with sections:
+
+- Main
+- About the Institute
+- Direction of researches
+- Framework of organization
+- Young Scientists League
+- Phytopathological society
+- Publications
+- Conferences
+- Contacts
+- Site map
+- Product reference book
+
+2) Short navigation bar on the each web page with sections:
+
+- Main
+- About
+- Researches
+- Organization
+- Contacts
+
+Views of each section is represented in mockups.
 All necessary content for the sections is provided by the institute (text, images, icons, documents).
 
-3.1.2 Navigation bar on the top side of each web page with sections (Its content must be on the center of page):
-- Main (one picture on the top of the section and text after).
-- About  (one picture on the center of the section and text before and after it).
-- Researches (only text).
-- Organization (sublist of departments of organization with links to detail description).
-- Contacts (text on the top of the section and gallery with photos after)
+####3.1.2 Footbar with service information
+Each web page must contain footbar with service information, which is provided by the institute.
 
-3.1.3 On the center side of each page must be located content according section.
+####3.1.3 Searching information about publications and the institute staff
+Section Publications must contatin search input with buttons find, clear and combo box for structute with options: 1) Management, 2) Laboratory of Herbology, 3)Laboratory of phytopathology, 4) Laboratory of entomology, 5) Laboratory for protection of fodder and industrial crops, 6) Laboratory for the Protection of Vegetable Crops and Potatoes,
+7) Laboratory of protection of fruit crops, 8) Laboratory of microbiological method of crop protection against pests and diseases, 9) Laboratory of Pesticide Dynamics, 10) Department of Information, 11) Marketing and Patent Studies.
 
-3.1.4 On the top of each page must be located picture with background and logo provided by institute.
+#### 3.1.4 Downloading documents
+In section conferences and publications must be a possibility to download documents by clicking on the correspond download button.
 
-3.1.5 Footbar with service information (provided by institute).
+####3.1.5 Table view of products from reference book of the institute 
+In section Products must be table view of products from reference book of institute with columns: 1) Name, 2) Consumption rate, 3) Culture, 4) Desease, 5) Processing method, 6) Days till last harvest, 7) Multiplicity. Table view must support the following product categories: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators. Before table view must be located form for searching products by name, culture, desease and active substance, with search button. After clicking search button table view must contain only correspond products if there are no corresponding products table view must be empty. Also Table view must contain scroll bar to show all products.
 
-3.1.6 Internalization of content in languages: Russian and English. Implemented by icons on right side of top the navigation bar
-
-3.1.7 Implemention of database using MySQL RDBMS storing information about products from reference book of institute. Support product categories are: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators
+####3.1.6 Storing information about products from reference book of the institute
+All  information about products from reference book of institute must be stored in database.
 
 ### 3.2 Non-Functional Requirements
-1) Access to the system should be through the HTTPS protocol
-2) The web app must support simultaneously at least 1000 users at a time
-3) The content must be readable in mobile and desktop devices
+
 #### 3.2.1 SOFTWARE QUALITY ATTRIBUTES
-- Performance - people don't wanna wait for many time while web page is loading. To avoid wasting precious time user must wait maximum 1 second to load any page on web app. Measures in time needed to load web page.
+- Performance - people don't want to wait for many time while web page is loading. To avoid wasting precious time user must wait maximum 1 second to load any page on web app. Measures in time needed to load web page.
 
 - Reability - the web app must be deployed 24 hours per day without troubles to access it. Important because users must know that they can use resource of web app any time they need it. Measures count of situations when user can't load web page (this count must be lower that 5 situations per day).
+
+- Internalization of content in languages: Russian and English - because often website is visited by users from other countries. Measures in part of content which has both russian and english languages.
+
+- Responsive user interface. The content of web app must be readable in mobile and desktop devices - nowadays more and more users surf the internet using only mobile devices. Measures in count of unreadeble content in mobile devices (this count must be as low as possible)
+
+- The web app must support simultaneously at least 500 users at a time - because there can be issues with responding of web content when there are a lot of users on website. Measures in maximum count of users that can use the web app simultaneously.
+
+####3.2.2 EXTERNAL INTERFACES
+
+- The web application's user interface must support the minimum screen resolution of 1024 * 768 - to see valid content of web app.
+
+####3.2.3 CONSTRAINTS
+- Backend of system must be implemented using Java 8 language and Spring Framework of version upper than 4.0.0
+- Frontend of the system must be implemented using CSS framework Twitter Bootstrap of version upper than 3.0.0 and Angular framework.
+- Database must be implemented using RDBMS MySQL of version upper than 5.5
