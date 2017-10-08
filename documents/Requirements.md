@@ -19,7 +19,7 @@ User interface will provide facilities on the web pages to navigate user through
 - Issues with rendering of web content in old versions of browsers.
 - Easy extensibility and changeability of content
 ## 3 System Requirements
-To use the web app application, you need desktop, laptop or mobile device with installed one of the recommended browsers:
+To use the web app, you need desktop, laptop or mobile device with installed one of the recommended browsers:
 
 - Yandex
 - Mozilla Firefox
