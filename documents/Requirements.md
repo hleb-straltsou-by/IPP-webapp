@@ -4,16 +4,16 @@ The designed software is web app represent Republic Scientific Subsidiary Unitar
 ## 2 User Requirements
 ### 2.1 Software Interfaces
 #### Used technologies
-- HTML, CSS (Twitter bootstrap), Typescipt and Angular on the front-end
+- HTML, CSS (Twitter bootstrap), Typescript and Angular on the front-end
 - Java and Spring Framework on the backend
 - MySQL RDBMS to store information about product reference book of the institute.
 
 ### 2.2 User Interfaces
 
-User interface will provide facilities on the web pages to navigate user through various information about institute, its departments, organization structure, provided matetials, scientific researches, conferences, education, international programs and communication, news and contacts. For more details see mockups.
+User interface will provide facilities on the web pages to navigate user through various information about institute, its departments, organization structure, provided materials, scientific researches, conferences, education, international programs and communication, news and contacts. For more details see mockups.
 ### 2.3 User Characteristics
-- Scientific staff, scientiests and researches from other universities and institutes - high educated people, professionals in sphere of ecology and plant protection.
-- Default staff of institute (engineers, laborants, administration, managment)
+- Scientific staff, scientists and researches from other universities and institutes - high educated people, professionals in sphere of ecology and plant protection.
+- Default staff of institute (engineers, laborants, administration, management)
 - People who search for information about products from reference book (agronomists) 
 ### 2.4 Assumptions and Dependencies
 - Issues with rendering of web content in old versions of browsers.
