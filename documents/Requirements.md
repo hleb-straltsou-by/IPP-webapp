@@ -56,11 +56,21 @@ Views of each section is represented in mockups.
 All necessary content for the sections is provided by the institute (text, images, icons, documents).
 
 #### 3.1.2 Footbar with service information
-Each web page must contain footbar with service information, which is provided by the institute.
+Each web page must contains footbar with service information, which is provided by the institute.
 
 #### 3.1.3 Searching information about publications and the institute staff
-Section Publications must contatin search input with buttons find, clear and combo box for structute with options: 1) Management, 2) Laboratory of Herbology, 3)Laboratory of phytopathology, 4) Laboratory of entomology, 5) Laboratory for protection of fodder and industrial crops, 6) Laboratory for the Protection of Vegetable Crops and Potatoes,
-7) Laboratory of protection of fruit crops, 8) Laboratory of microbiological method of crop protection against pests and diseases, 9) Laboratory of Pesticide Dynamics, 10) Department of Information, 11) Marketing and Patent Studies.
+Section Publications must contatin search input with buttons find, clear and combo box for structute with options:
+  1) Management
+  2) Laboratory of Herbology
+  3)Laboratory of phytopathology
+  4) Laboratory of entomology
+  5) Laboratory for protection of fodder and industrial crops
+  6) Laboratory for the Protection of Vegetable Crops and Potatoes
+  7) Laboratory of protection of fruit crops
+  8) Laboratory of microbiological method of crop protection against pests and diseases
+  9) Laboratory of Pesticide Dynamics
+  10) Department of Information
+  11) Marketing and Patent Studies.
 
 #### 3.1.4 Downloading documents
 In section conferences and publications must be a possibility to download documents by clicking on the correspond download button.
@@ -90,5 +100,5 @@ All information about products from reference book of institute must be stored i
 
 #### 3.2.3 CONSTRAINTS
 - Backend of system must be implemented using Java 8 language and Spring Framework of version upper than 4.0.0
-- Frontend of the system must be implemented using CSS framework Twitter Bootstrap of version upper than 3.0.0 and Angular framework.
+- Frontend of the system must be implemented using CSS framework Twitter Bootstrap of version upper than 3.0.0 and Angular 4 framework.
 - Database must be implemented using RDBMS MySQL of version upper than 5.5
