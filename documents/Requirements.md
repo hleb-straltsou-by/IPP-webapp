@@ -73,7 +73,7 @@ Section Publications must contatin search input with buttons find, clear and com
   11) Marketing and Patent Studies.
 
 #### 3.1.4 Downloading documents
-In section conferences and publications must be a possibility to download documents by clicking on the correspond download button.
+In sections conferences and publications must be a possibility to download documents by clicking on the correspond download button.
 
 #### 3.1.5 Table view of products from reference book of the institute 
 In section Products must be table view of products from reference book of institute with columns: 1) Name, 2) Consumption rate, 3) Culture, 4) Desease, 5) Processing method, 6) Days till last harvest, 7) Multiplicity. Table view must support the following product categories: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators. Before table view must be located form for searching products by name, culture, desease and active substance, with search button. After clicking search button table view must contain only correspond products if there are no corresponding products table view must be empty. Also Table view must contain scroll bar to show all products.
@@ -88,7 +88,7 @@ All information about products from reference book of institute must be stored i
 
 - Reability - the web app must be deployed 24 hours per day without troubles to access it. Important because users must know that they can use resource of web app any time they need it. Measures count of situations when user can't load web page (this count must be lower that 5 situations per day).
 
-- Internalization of content in languages: Russian and English - because often website is visited by users from other countries. Measures in part of content which has both russian and english languages.
+- Multilanguage - the content of the webapp must be in languages: Russian and English - because often website is visited by users from other countries. Measures in part of content which has both russian and english languages.
 
 - Responsive user interface. The content of web app must be readable in mobile and desktop devices - nowadays more and more users surf the internet using only mobile devices. Measures in count of unreadeble content in mobile devices (this count must be as low as possible)
 
