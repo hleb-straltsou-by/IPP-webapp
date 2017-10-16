@@ -56,7 +56,7 @@ Views of each section is represented in mockups.
 All necessary content for the sections is provided by the institute (text, images, icons, documents).
 
 #### 3.1.2 Searching information about publications and the institute staff
-Userts can search for information about publications and institute staff in section Publications. Section Publications must contatin search input with buttons find, clear and combo box for structute with options:
+Users can search for information about publications and institute staff in section Publications. Section Publications must contatin search input with buttons find, clear and combo box for structute with options:
   1) Management
   2) Laboratory of Herbology
   3)Laboratory of phytopathology
