@@ -26,9 +26,9 @@ To use the web app, you need desktop, laptop or mobile device with installed one
 - Google Chrome (15+)
 
 ### 3.1 Functional Requirements
-#### 3.1.1 Routing and navigation through web app content
+#### 3.1.1 Routing and navigation through the web app content using sections.
 
-Routing and navigation through webapp must be implemented by using the correspond sections from the navigation bars. After clicking on the section the content of correspond section appears on the web page. Must be implemented the following navigation bars:
+Users can browse content of web app using sections on navigation bars. Routing and navigation through webapp must be implemented by using the correspond sections from the navigation bars. After clicking on the section the content of correspond section appears on the web page. Must be implemented the following navigation bars:
 
 1) Detail navigation bar on the each web page with sections:
 
@@ -56,7 +56,7 @@ Views of each section is represented in mockups.
 All necessary content for the sections is provided by the institute (text, images, icons, documents).
 
 #### 3.1.2 Searching information about publications and the institute staff
-Section Publications must contatin search input with buttons find, clear and combo box for structute with options:
+Userts can search for information about publications and institute staff in section Publications. Section Publications must contatin search input with buttons find, clear and combo box for structute with options:
   1) Management
   2) Laboratory of Herbology
   3)Laboratory of phytopathology
@@ -70,13 +70,13 @@ Section Publications must contatin search input with buttons find, clear and com
   11) Marketing and Patent Studies.
 
 #### 3.1.3 Downloading documents
-In sections conferences and publications must be a possibility to download documents provided by The Institute.
+Users can download provided documents provided by The Institute in sections conferences and publications.
 
-#### 3.1.4 Table view of products from reference book of the institute 
-Users can search for information about products from reference book of the institute. In section Products must be table view of products from reference book of institute with columns: 1) Name, 2) Consumption rate, 3) Culture, 4) Desease, 5) Processing method, 6) Days till last harvest, 7) Multiplicity. Table view must support the following product categories: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators. Before table view must be located form for searching products by name, culture, desease and active substance, with search button. After clicking search button table view must contain only correspond products if there are no corresponding products table view must be empty. Also Table view must contain scroll bar to show all products.
+#### 3.1.4 Browsing and searching for information about products 
+Users can browse and search for information about products from reference book of the institute. In section Products must be table view of products from reference book of institute with columns: 1) Name, 2) Consumption rate, 3) Culture, 4) Desease, 5) Processing method, 6) Days till last harvest, 7) Multiplicity. Table view must support the following product categories: herbicides, insectisides, fungisides, herbicides-pav, growth-regulators. Before table view must be located form for searching products by name, culture, desease and active substance, with search button. After clicking search button table view must contain only correspond products if there are no corresponding products table view must be empty. Also Table view must contain scroll bar to show all products.
 
-#### 3.1.5 Storing information about products from reference book of the institute
-All information about products from reference book of institute must be permanently stored in database.
+#### 3.1.5 Switching language of the content
+Users can switch the language of the wep app content.
 
 #### 3.1.6 Footbar with service information
 Users can browse service information using footbar, service information is provided by the institute.
@@ -99,6 +99,6 @@ Users can browse service information using footbar, service information is provi
 - The web application's user interface must support the minimum screen resolution of 1024 * 768 - to see valid content of web app.
 
 #### 3.2.3 CONSTRAINTS
-- Backend of system must be implemented using Java 8 language and Spring Framework of version upper than 4.0.0
+- Backend of system must be implemented using Java 8 language and Spring Framework of version upper than 4.0.0.
 - Frontend of the system must be implemented using CSS framework Twitter Bootstrap of version upper than 3.0.0 and Angular 4 framework.
-- Database must be implemented using RDBMS MySQL of version upper than 5.5
+- Storing information about products in database must be implemented using RDBMS MySQL of version upper than 5.5.
