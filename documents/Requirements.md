@@ -78,7 +78,7 @@ Users can browse and search for information about products from reference book o
 #### 3.1.5 Switching language of the content
 Users can switch the language of the wep app content.
 
-#### 3.1.6 Footbar with service information
+#### 3.1.6 Browsing service information
 Users can browse service information using footbar, service information is provided by the institute.
 
 ### 3.2 Non-Functional Requirements
