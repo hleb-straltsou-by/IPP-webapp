@@ -69,7 +69,7 @@ Users can search for information about publications and institute staff in secti
   10) Department of Information
   11) Marketing and Patent Studies.
 
-#### 3.1.3 Downloading documents
+#### 3.1.3 Downloading documents about conferences and publications
 Users can download provided documents provided by The Institute in sections conferences and publications.
 
 #### 3.1.4 Browsing and searching for information about products 
