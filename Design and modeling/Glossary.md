@@ -10,7 +10,7 @@
 - represent document with scientific material
 
 ## Institute staff
-- any employee of the insitute
+- any employee of the institute
 
 ## Organization 
 - represent structure of the institute
