@@ -1,0 +1,13 @@
+.intro-header {
+  position: relative;
+  padding-left: 50px;
+  color: #312d29;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: url("https://gospress.ru/wp-content/uploads/2017/04/Selskoe-hozyajstvo-min.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.service-info {
+  padding-bottom: 50px;  
+}
