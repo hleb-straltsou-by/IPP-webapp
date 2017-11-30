@@ -1,0 +1,18 @@
+<p-dataList [value]="persons" [paginator]="false">
+    <p-header>
+        <strong>{{header}}</strong>
+    </p-header>
+    <ng-template let-person pTemplate="person">
+        <div class="ui-g ui-fluid person-item">
+            <div class="ui-g-12 ui-md-2" style="text-align:center">
+                <img src="assets/pictures/governing-body/{{person.avatar}}" class="img-responsive img-rounded">
+            </div>
+            <div class="ui-g-12 ui-md-10 car-details">
+                <div class="ui-g">
+                    <p><strong>{{person.header}}</strong></p>
+                    <p><strong>{{person.name}}</strong> {{person.info}}</p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-dataList>

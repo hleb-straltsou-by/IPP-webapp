@@ -1,97 +1,108 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgIf } from '@angular/common';
-import { RouterModule, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { PanelMenuModule, MenuItem, FieldsetModule } from 'primeng/primeng';
+import { TranslateService } from 'ng2-translate';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './main.component.html',
-    styleUrls: ['./main.component.css']
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 
-export class MainComponent {
+export class AppComponent implements OnInit {
 
     items: MenuItem[];
-    
-    showRouterOutlet: Boolean = true;
-    
-    constructor(private activatedRoute: ActivatedRoute ) { }
+
+    showRouterOutlet: Boolean = false;
+
+    constructor(private translate: TranslateService, private activatedRoute: ActivatedRoute ) {
+        translate.setDefaultLang('en');
+        translate.use('en');
+    }
 
     ngOnInit() {
-        if (this.activatedRoute.outlet === "/main"){
-            this.showRouterOutlet = false;
-        }
+
+        // if (this.activatedRoute.outlet === "/main"){
+        //     this.showRouterOutlet = false;
+        // } else {
+        //     this.showRouterOutlet = true;
+        // }
+
         this.items = [
             {
                 label: 'Main',
                 icon: 'fa-file-o',
-                command: (event) => {this.showRouterOutlet = false}
             },
             {
                 label: 'About the Institute',
                 icon: 'fa-edit',
                 routerLink: ['about'],
-                routerLinkActiveOptions: {exact:true},
-                command: (event) => {this.showRouterOutlet = true}
+                routerLinkActiveOptions: {exact: true},
             },
             {
                 label: 'Direction of researches',
                 icon: 'fa-question',
                 routerLink: ['researches'],
-                routerLinkActiveOptions: {exact:true},
-                command: (event) => {this.showRouterOutlet = true}
+                routerLinkActiveOptions: {exact: true},
             },
             {
                 label: 'Framework of organization',
                 icon: 'fa-gear',
                 routerLink: ['organization'],
-                routerLinkActiveOptions: {exact:true},
-                command: (event) => {this.showRouterOutlet = true}
+                routerLinkActiveOptions: {exact: true},
             },
             {
                 label: 'Young Scientists League',
                 icon: 'fa-gear',
                 routerLink: ['scientists'],
-                routerLinkActiveOptions: {exact:true},
-                command: (event) => {this.showRouterOutlet = true}
+                routerLinkActiveOptions: {exact: true},
             },
             {
                 label: 'Phytopathological society',
                 icon: 'fa-gear',
                 routerLink: ['society'],
-                routerLinkActiveOptions: {exact:true},
-                command: (event) => {this.showRouterOutlet = true}
+                routerLinkActiveOptions: {exact: true},
             },
             {
                 label: 'Publications',
                 icon: 'fa-gear',
                 routerLink: ['publications'],
-                routerLinkActiveOptions: {exact:true},
+                routerLinkActiveOptions: {exact: true},
             },
             {
                 label: 'Conferences',
                 icon: 'fa-gear',
                 routerLink: ['conferences'],
-                routerLinkActiveOptions: {exact:true},
-                command: (event) => {this.showRouterOutlet = true}
+                routerLinkActiveOptions: {exact: true},
             },
             {
                 label: 'Site map',
                 icon: 'fa-gear',
                 routerLink: ['site'],
-                routerLinkActiveOptions: { exact:true },
-                command: (event) => {this.showRouterOutlet = true}
+                routerLinkActiveOptions: { exact: true },
             },
             {
                 label: 'Product reference book',
                 icon: 'fa-gear',
                 routerLink: ['products'],
-                routerLinkActiveOptions: {exact:true},
-                command: (event) => {this.showRouterOutlet = true}
+                routerLinkActiveOptions: {exact: true},
             },
         ];
     }
-    
+
+    // setLanguage(lang: string) {
+    //     this.translate.use(lang);
+    // }
+
+    // setEnLanguage() {
+    //     this.translate.use("en");
+    // }
+
+    // setRuLanguage() {
+    //     this.translate.use("ru");
+    // }
+
     //    items: MenuItem[];
 //
 //    ngOnInit() {
