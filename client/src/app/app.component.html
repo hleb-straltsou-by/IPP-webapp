@@ -1,0 +1,75 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#">Main</a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li class="active"><a href="/about">About</a></li>
+          <li><a href="/researches">Researches</a></li>
+          <li><a href="/organization">Organizations</a></li>
+          <li><a href="/contacts">Contacts</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li (click)="setEnLanguage()"><a href="">En</a></li>
+        <li (click)="setRuLanguage()"><a href="">Ru</a></li>
+      </ul>
+  </div>
+</nav>   
+
+<div class="intro-header">
+ <div class="ui-g">
+    <div class="ui-g-1">
+      <img src="assets/pictures/logo.jpg" class="img-responsive img-rounded">
+    </div>
+    <div class="ui-g-5">
+      <h1>{{ 'INSTITUTE' | translate }}</h1>
+    </div>    
+ </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-3">
+      <p-panelMenu [model]="items"></p-panelMenu>
+      <div class="ui-g">
+          <div class="ui-g-6">
+              <a href="https://www.facebook.com/izr.by/">
+                  <img src="assets/pictures/facebook.jpg" class="img-responsive img-thumbnail">
+              </a>
+              <a href="http://www.mshp.gov.by/">
+                  <img src="assets/pictures/mshp.minsk.by.jpg" class="img-responsive img-thumbnail">
+              </a>
+          </div>
+          <div class="ui-g-6">
+              <a href="http://nasb.gov.by/rus/index.php">
+                  <img src="assets/pictures/nash.gos.by.jpg" class="img-responsive img-thumbnail">
+              </a>
+              <a href="http://izis.by/">
+                  <img src="assets/pictures/izis.by.jpg" class="img-responsive img-thumbnail">
+              </a>
+          </div>
+      </div>
+  </div>
+  
+  <div class="ui-g-9">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div class="ui-g service-info">
+  <div class="ui-g-12">
+      <p-fieldset legend="Service info" [toggleable]="true">
+          <div class="ui-g-4">
+              <p>http://izr.by</p>
+              <p>Сайт разработан РУП “Институт защиты растений”.</p>
+          </div>
+          <div class="ui-g-4">
+              <p>Сайт поддерживает: Отдел информации, маркетинга и патентных иссследований</p>
+              <p>Последнее обновление 29 сентября 2017 г.</p> 
+          </div>
+          <div class="ui-g-4">
+              <p>Ответственный за обеспечение информационно-технологического сопровождения сайта:</p>
+              <p>Головач В.В., тел. (017) 509-23-68, моб. 375 29 606-26-13 </p>
+          </div>
+      </p-fieldset>
+  </div>
+</div>
