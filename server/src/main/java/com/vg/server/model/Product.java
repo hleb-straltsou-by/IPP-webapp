@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "HERO")
-public class Hero {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,9 +12,9 @@ public class Hero {
 
     private String name;
 
-    public Hero(){}
+    public Product(){}
 
-    public Hero(String name) {
+    public Product(String name) {
         this.name = name;
     }
 

@@ -1,6 +1,6 @@
 package com.vg.server.repository;
 
-import com.vg.server.model.Hero;
+import com.vg.server.model.Product;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -12,16 +12,16 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "heroes", path = "heroes")
-public interface HeroRepository extends CrudRepository<Hero, Long> {
+public interface ProductRepository extends CrudRepository<Product, Long> {
 
-    @Query("from Hero h where lower(h.name) like CONCAT('%', lower(:name), '%')")
-    List<Hero> findByName(@Param("name") String name);
+    @Query("from Product p where lower(p.name) like CONCAT('%', lower(:name), '%')")
+    List<Product> findByName(@Param("name") String name);
 
-    @Query("from Hero h")
-    List<Hero> getHeroesLimited(Pageable pageable);
+    @Query("from Product p")
+    List<Product> getHeroesLimited(Pageable pageable);
 
     @Transactional
     @Modifying(clearAutomatically=true)
-    @Query("update Hero h set h.name = :newHeroName where h.id = :id")
-    int updateHero(@Param("id") long id, @Param("newHeroName") String newHeroName);
+    @Query("update Product p set p.name = :newName where p.id = :id")
+    int updateHero(@Param("id") long id, @Param("newHeroName") String newName);
 }

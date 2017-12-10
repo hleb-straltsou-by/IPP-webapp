@@ -1,6 +1,6 @@
 package com.vg.server.config;
 
-import com.vg.server.model.Hero;
+import com.vg.server.model.Product;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
@@ -9,6 +9,6 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapt
 public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-        config.exposeIdsFor(Hero.class);
+        config.exposeIdsFor(Product.class);
     }
 }
