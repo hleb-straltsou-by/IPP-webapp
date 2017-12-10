@@ -1,8 +1,8 @@
 package com.vg.server.controller;
 
 import com.google.gson.Gson;
-import com.vg.server.model.Hero;
-import com.vg.server.service.HeroService;
+import com.vg.server.model.Product;
+import com.vg.server.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class HeroController {
+public class ProductController {
 
     @Autowired
-    private HeroService heroService;
+    private ProductService productService;
 
     private static final String DEFAULT_HERO_ID_PARAM = "0";
 
@@ -25,25 +25,25 @@ public class HeroController {
     private static final int DEFAULT_HEROES_LIMITED_COUNT = 10;
 
     @RequestMapping(value = "/hero", method=RequestMethod.GET)
-    public Hero getHero(@RequestParam(value="id",
+    public Product getHero(@RequestParam(value="id",
             defaultValue=DEFAULT_HERO_ID_PARAM) String idStr) {
         long id;
-        Hero hero;
+        Product product;
         try {
             id = Long.parseLong(idStr);
-            hero = heroService.findHeroById(id);
+            product = productService.findHeroById(id);
         }catch (NumberFormatException nfe){
             id = Long.parseLong(DEFAULT_HERO_ID_PARAM);
-            hero = heroService.findHeroById(id);
+            product = productService.findHeroById(id);
         }
-        return (hero == null) ? new Hero(EMPTY_HERO_NAME) : hero;
+        return (product == null) ? new Product(EMPTY_HERO_NAME) : product;
     }
 
     @RequestMapping(value="/heroes", method=RequestMethod.GET)
-    public Iterable<Hero> getHeroes(@RequestParam(value="count",
+    public Iterable<Product> getHeroes(@RequestParam(value="count",
             defaultValue=DEFAULT_HEROES_COUNT_PARAM) String countStr){
         if(countStr.equals(DEFAULT_HEROES_COUNT_PARAM)){
-            return heroService.getAllHeroes();
+            return productService.getAllHeroes();
         }
         int count = 0;
         try {
@@ -54,19 +54,19 @@ public class HeroController {
         } catch (NumberFormatException nfe){
             count = DEFAULT_HEROES_LIMITED_COUNT;
         } finally {
-            heroService.getHeroesLimited(count);
+            productService.getHeroesLimited(count);
         }
-        return heroService.getHeroesLimited(count);
+        return productService.getHeroesLimited(count);
     }
 
     @RequestMapping(value="/add/hero", method=RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    public Hero addHero(@RequestBody String nameJson){
+    public Product addHero(@RequestBody String nameJson){
         Gson gson = new Gson();
-        Hero hero = gson.fromJson(nameJson, Hero.class);
-        hero = heroService.addHero(hero);
-        return hero;
+        Product product = gson.fromJson(nameJson, Product.class);
+        product = productService.addHero(product);
+        return product;
     }
 
     @RequestMapping(value="/update/hero", method=RequestMethod.PUT)
@@ -74,8 +74,8 @@ public class HeroController {
     @ResponseBody
     public int updateHero(@RequestBody String heroJson){
         Gson gson = new Gson();
-        final Hero hero = gson.fromJson(heroJson, Hero.class);
-        return heroService.updateHero(hero.getId(), hero);
+        final Product product = gson.fromJson(heroJson, Product.class);
+        return productService.updateHero(product.getId(), product);
     }
 
     @RequestMapping(value="/delete/hero", method=RequestMethod.DELETE)
@@ -87,12 +87,12 @@ public class HeroController {
         }catch (NumberFormatException nfe){
             id = Long.parseLong(DEFAULT_HERO_ID_PARAM);
         } finally {
-            heroService.deleteHero(id);
+            productService.deleteHero(id);
         }
     }
 
     @RequestMapping(value = "/heroes/search/findByName", method= RequestMethod.GET)
-    public List<Hero> findHeroesByName(@RequestParam(value="name") String name) {
-        return heroService.findHeroesByName(name);
+    public List<Product> findHeroesByName(@RequestParam(value="name") String name) {
+        return productService.findHeroesByName(name);
     }
 }
