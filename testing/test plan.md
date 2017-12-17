@@ -82,49 +82,62 @@ Test results must be desribed by the following plan:
 5. Actual result
 6. Mark
 
-Test cases:
-1.1 141220171257.
-1.2 After clicking on the section of "Framework of organization. Governing body" result html page should contains 6 persons.
-1.3 User clicks on the 'Governing body' link in the Framework of organization section and sees 6 six persons of the reulst html page.
-1.4 Expected 6 persons on the result html page.
-1.5 Returned 6 pesons on the result html page.
-1.6 Test is passed.
+# Test cases:
+1. 1 141220171257.
+1. 2 After clicking on the section of "Framework of organization. Governing body" result html page should contains 6 persons.
+1. 3 User clicks on the 'Governing body' link in the Framework of organization section and sees 6 six persons of the reulst html page.
+1. 4 Expected 6 persons on the result html page.
+1. 5 Returned 6 pesons on the result html page.
+1. 6 Test is passed.
 
-2.1 141220171305.
-2.2 After clicking on the section of "Direction of researches" result html page should contains 8 directions in block "Area of activities".
-2.3 User clicks link to the section "Direction of researches" and sees direction of researches list.
-2.4 Expected 8 direction of researches on the result html page.
-2.5 Returned 8 direction of researches on the result html page.
-2.6 Test is passed
+2. 1 141220171305.
+2. 2 After clicking on the section of "Direction of researches" result html page should contains 8 directions in block "Area of activities".
+2. 3 User clicks link to the section "Direction of researches" and sees direction of researches list.
+2. 4 Expected 8 direction of researches on the result html page.
+2. 5 Returned 8 direction of researches on the result html page.
+2. 6 Test is passed
 
-3.1 141220171330.
-3.2 After loading main page should contains 4 links to social groups of university.
-3.3 User load main page and sees 4 links to the social network groups.
-3.4 Expected 4 links: http://www.facebook.com/izr.by/, http://mshp.minsk.by/, http://nasb.gov.by/rus/index.php, http://izis.by/
-3.5 Actual links are correspond to expected.
-3.6. Test is passed.
+3. 1 141220171330.
+3. 2 After loading main page should contains 4 links to social groups of university.
+3. 3 User load main page and sees 4 links to the social network groups.
+3. 4 Expected 4 links: http://www.facebook.com/izr.by/, http://mshp.minsk.by/, http://nasb.gov.by/rus/index.php, http://izis.by/
+3. 5 Actual links are correspond to expected.
+3. 6. Test is passed.
 
-4.1 141220171350.
-4.2 After loading main page should contains 2 buttons for changing page language: Ru, Eng.
-4.3 User load main page and sees 2 buttons for changing page language.
-4.4 Expected 2 buttons in the result html page.
-4.5 Actual buttons are correspond to expected.
-4.6. Test is passed.
+4. 1 141220171350.
+4. 2 After loading main page should contains 2 buttons for changing page language: Ru, Eng.
+4. 3 User load main page and sees 2 buttons for changing page language.
+4. 4 Expected 2 buttons in the result html page.
+4. 5 Actual buttons are correspond to expected.
+4. 6. Test is passed.
 
-5.1 151220171847
-5.2 After clicking on the section of "Young Scientists League" result html page should contains 6 pictures.
-5.3 User clicks on the section "Young Scientists League" and sees on the result html page 6 pictures.
-5.4 Expected 6 pictures on the result html page.
-5.5 Actual count pictures correspond to expected.
-5.6 Test is passed.
+5. 1 151220171847
+5. 2 After clicking on the section of "Young Scientists League" result html page should contains 6 pictures.
+5. 3 User clicks on the section "Young Scientists League" and sees on the result html page 6 pictures.
+5. 4 Expected 6 pictures on the result html page.
+5. 5 Actual count pictures correspond to expected.
+5. 6 Test is passed.
 
-5.1 151220171925
-5.2 After clicking on the section of "About the institute" user wil be redirected to the '/about' url path.
-5.3 User clicks on the section "About the institute" and sees url path with domen + '/about'.
-5.4 Expected relative path is '/about'.
-5.5 Actual relative path is '/about'.
-5.6 Test is passed.
+6. 1 151220171925
+6. 2 After clicking on the section of "About the institute" user wil be redirected to the '/about' url path.
+6. 3 User clicks on the section "About the institute" and sees url path with domen + '/about'.
+6. 4 Expected relative path is '/about'.
+6. 5 Actual relative path is '/about'.
+6. 6 Test is passed.
 
+7. 1 161220172147.
+7. 2 Rest request for getting publications return all publications in JSON format.
+7. 3 User type domen/api/publications to the browser and gets all publications in JSON format.
+7. 4 Expected 10 publications without count param.
+7. 5 Returned 8 publicatons without count param.
+7. 6 Test is passed
+
+8. 1 161220172204.
+8. 2 Rest request for getting publication by id return correspont publication in JSON format.
+8. 3 User type domen/api/paublication/4 to the browser and gets publication with id 4 in JSON format.
+8. 4 Expected publication with id 4.
+8. 5 Returned publication with id 4.
+8. 6 Test is passed
 
 ## 12. Remaining test tasks
 - Testing of sections: Contacts, Conferences, Publications, Site Map
