@@ -8,17 +8,17 @@ import java.util.List;
 @Service
 public interface ProductService {
 
-    Product findHeroById(long id);
+    Product findProductById(long id);
 
-    List<Product> findHeroesByName(String namePattern);
+    List<Product> findProductsByName(String namePattern);
 
-    List<Product> getHeroesLimited(int count);
+    List<Product> getProductsLimited(int count);
 
-    Iterable<Product> getAllHeroes();
+    Iterable<Product> getAllProduct();
 
-    Product addHero(Product product);
+    Product addProduct(Product product);
 
-    int updateHero(long id, Product product);
+    int updateProduct(long id, Product product);
 
-    void deleteHero(long id);
+    void deleteProduct(long id);
 }

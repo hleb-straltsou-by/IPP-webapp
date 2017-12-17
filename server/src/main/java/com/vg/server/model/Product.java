@@ -3,7 +3,7 @@ package com.vg.server.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "HERO")
+@Table(name = "PRODUCT")
 public class Product {
 
     @Id
