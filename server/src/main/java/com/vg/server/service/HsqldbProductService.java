@@ -15,37 +15,37 @@ public class HsqldbProductService implements ProductService {
     private ProductRepository repository;
 
     @Override
-    public Product findHeroById(long id) {
+    public Product findProductById(long id) {
         return repository.findOne(id);
     }
 
     @Override
-    public List<Product> findHeroesByName(String namePattern) {
+    public List<Product> findProductsByName(String namePattern) {
         return repository.findByName(namePattern);
     }
 
     @Override
-    public List<Product> getHeroesLimited(int count) {
-        return repository.getHeroesLimited(new PageRequest(0, count));
+    public List<Product> getProductsLimited(int count) {
+        return repository.getProductsLimited(new PageRequest(0, count));
     }
 
     @Override
-    public Iterable<Product> getAllHeroes() {
+    public Iterable<Product> getAllProduct() {
         return repository.findAll();
     }
 
     @Override
-    public Product addHero(Product product) {
+    public Product addProduct(Product product) {
         return repository.save(product);
     }
 
     @Override
-    public int updateHero(long id, Product product) {
-        return repository.updateHero(id, product.getName());
+    public int updateProduct(long id, Product product) {
+        return repository.updateProduct(id, product.getName());
     }
 
     @Override
-    public void deleteHero(long id) {
+    public void deleteProduct(long id) {
         repository.delete(id);
     }
 }

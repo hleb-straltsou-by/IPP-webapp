@@ -16,83 +16,80 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    private static final String DEFAULT_HERO_ID_PARAM = "0";
+    private static final String DEFAULT_PRODUCT_ID_PARAM = "0";
+    private static final String DEFAULT_PRODUCT_COUNT_PARAM = "all";
+    private static final String EMPTY_PRODUCT_NAME = "none";
+    private static final int DEFAULT_PRODUCT_LIMITED_COUNT = 10;
 
-    private static final String DEFAULT_HEROES_COUNT_PARAM = "all";
-
-    private static final String EMPTY_HERO_NAME = "none";
-
-    private static final int DEFAULT_HEROES_LIMITED_COUNT = 10;
-
-    @RequestMapping(value = "/hero", method=RequestMethod.GET)
-    public Product getHero(@RequestParam(value="id",
-            defaultValue=DEFAULT_HERO_ID_PARAM) String idStr) {
+    @RequestMapping(value = "/product", method=RequestMethod.GET)
+    public Product getProduct(@RequestParam(value="id",
+            defaultValue= DEFAULT_PRODUCT_ID_PARAM) String idStr) {
         long id;
         Product product;
         try {
             id = Long.parseLong(idStr);
-            product = productService.findHeroById(id);
+            product = productService.findProductById(id);
         }catch (NumberFormatException nfe){
-            id = Long.parseLong(DEFAULT_HERO_ID_PARAM);
-            product = productService.findHeroById(id);
+            id = Long.parseLong(DEFAULT_PRODUCT_ID_PARAM);
+            product = productService.findProductById(id);
         }
-        return (product == null) ? new Product(EMPTY_HERO_NAME) : product;
+        return (product == null) ? new Product(EMPTY_PRODUCT_NAME) : product;
     }
 
-    @RequestMapping(value="/heroes", method=RequestMethod.GET)
-    public Iterable<Product> getHeroes(@RequestParam(value="count",
-            defaultValue=DEFAULT_HEROES_COUNT_PARAM) String countStr){
-        if(countStr.equals(DEFAULT_HEROES_COUNT_PARAM)){
-            return productService.getAllHeroes();
+    @RequestMapping(value="/products", method=RequestMethod.GET)
+    public Iterable<Product> getProducts(@RequestParam(value="count",
+            defaultValue= DEFAULT_PRODUCT_COUNT_PARAM) String countStr){
+        if(countStr.equals(DEFAULT_PRODUCT_COUNT_PARAM)){
+            return productService.getAllProduct();
         }
         int count = 0;
         try {
             count = Integer.parseInt(countStr);
             if(count < 0){
-                count = DEFAULT_HEROES_LIMITED_COUNT;
+                count = DEFAULT_PRODUCT_LIMITED_COUNT;
             }
         } catch (NumberFormatException nfe){
-            count = DEFAULT_HEROES_LIMITED_COUNT;
+            count = DEFAULT_PRODUCT_LIMITED_COUNT;
         } finally {
-            productService.getHeroesLimited(count);
+            productService.getProductsLimited(count);
         }
-        return productService.getHeroesLimited(count);
+        return productService.getProductsLimited(count);
     }
 
-    @RequestMapping(value="/add/hero", method=RequestMethod.POST)
+    @RequestMapping(value="/add/product", method=RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    public Product addHero(@RequestBody String nameJson){
+    public Product addProduct(@RequestBody String nameJson){
         Gson gson = new Gson();
         Product product = gson.fromJson(nameJson, Product.class);
-        product = productService.addHero(product);
+        product = productService.addProduct(product);
         return product;
     }
 
-    @RequestMapping(value="/update/hero", method=RequestMethod.PUT)
+    @RequestMapping(value="/update/product", method=RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    public int updateHero(@RequestBody String heroJson){
+    public int updateProduct(@RequestBody String heroJson){
         Gson gson = new Gson();
         final Product product = gson.fromJson(heroJson, Product.class);
-        return productService.updateHero(product.getId(), product);
+        return productService.updateProduct(product.getId(), product);
     }
 
-    @RequestMapping(value="/delete/hero", method=RequestMethod.DELETE)
-    public void deleteHero(@RequestParam(value="id",
-            defaultValue = DEFAULT_HERO_ID_PARAM) String idStr){
+    @RequestMapping(value="/delete/product", method=RequestMethod.DELETE)
+    public void deleteProduct(@RequestParam(value="id",
+            defaultValue = DEFAULT_PRODUCT_ID_PARAM) String idStr){
         long id = 0;
         try {
             id = Long.parseLong(idStr);
         }catch (NumberFormatException nfe){
-            id = Long.parseLong(DEFAULT_HERO_ID_PARAM);
+            id = Long.parseLong(DEFAULT_PRODUCT_ID_PARAM);
         } finally {
-            productService.deleteHero(id);
+            productService.deleteProduct(id);
         }
     }
 
-    @RequestMapping(value = "/heroes/search/findByName", method= RequestMethod.GET)
-    public List<Product> findHeroesByName(@RequestParam(value="name") String name) {
-        return productService.findHeroesByName(name);
+    @RequestMapping(value = "/products/search/findByName", method= RequestMethod.GET)
+    public List<Product> findProductsByName(@RequestParam(value="name") String name) {
+        return productService.findProductsByName(name);
     }
 }

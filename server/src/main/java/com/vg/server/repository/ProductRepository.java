@@ -11,17 +11,17 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@RepositoryRestResource(collectionResourceRel = "heroes", path = "heroes")
+@RepositoryRestResource(collectionResourceRel = "products", path = "products")
 public interface ProductRepository extends CrudRepository<Product, Long> {
 
     @Query("from Product p where lower(p.name) like CONCAT('%', lower(:name), '%')")
     List<Product> findByName(@Param("name") String name);
 
     @Query("from Product p")
-    List<Product> getHeroesLimited(Pageable pageable);
+    List<Product> getProductsLimited(Pageable pageable);
 
     @Transactional
     @Modifying(clearAutomatically=true)
     @Query("update Product p set p.name = :newName where p.id = :id")
-    int updateHero(@Param("id") long id, @Param("newHeroName") String newName);
+    int updateProduct(@Param("id") long id, @Param("newName") String newName);
 }
