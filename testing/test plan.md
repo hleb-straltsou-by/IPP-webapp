@@ -65,7 +65,7 @@ Current test plan identifier (date and time format - ddmmyyyyhhmm): 101220172228
 ## 9. Item pass/fail criteria
 - At the Unit test level all test cases must be completed
 - Functional and integration tests must be completed for specified version of app.
-- Code coverage must be at least 60%
+- Code coverage must be at least 30%
 
 ## 10. Suspension criteria and resumption requirements
 - Accetable level of defects that will allow the testing specified by a possibility to launch app and use it's main features.
@@ -73,9 +73,58 @@ Current test plan identifier (date and time format - ddmmyyyyhhmm): 101220172228
 
 ## 11. Test Deliverables
 
+Test results must be desribed by the following plan:
+
+1. Id (date and time format - ddmmyyyyhhmm): 101220172228
+2. Name / target
+3. Scenario
+4. Expected result
+5. Actual result
+6. Mark
+
 Test cases:
-1. After clicking on the section of "Framework of organization. Governing body" result html page should contains 6 persons
-2. After clicking on the section of "Direction of researches" result html page should contains 8 directions in block "Area of activities"
+1.1 141220171257.
+1.2 After clicking on the section of "Framework of organization. Governing body" result html page should contains 6 persons.
+1.3 User clicks on the 'Governing body' link in the Framework of organization section and sees 6 six persons of the reulst html page.
+1.4 Expected 6 persons on the result html page.
+1.5 Returned 6 pesons on the result html page.
+1.6 Test is passed.
+
+2.1 141220171305.
+2.2 After clicking on the section of "Direction of researches" result html page should contains 8 directions in block "Area of activities".
+2.3 User clicks link to the section "Direction of researches" and sees direction of researches list.
+2.4 Expected 8 direction of researches on the result html page.
+2.5 Returned 8 direction of researches on the result html page.
+2.6 Test is passed
+
+3.1 141220171330.
+3.2 After loading main page should contains 4 links to social groups of university.
+3.3 User load main page and sees 4 links to the social network groups.
+3.4 Expected 4 links: http://www.facebook.com/izr.by/, http://mshp.minsk.by/, http://nasb.gov.by/rus/index.php, http://izis.by/
+3.5 Actual links are correspond to expected.
+3.6. Test is passed.
+
+4.1 141220171350.
+4.2 After loading main page should contains 2 buttons for changing page language: Ru, Eng.
+4.3 User load main page and sees 2 buttons for changing page language.
+4.4 Expected 2 buttons in the result html page.
+4.5 Actual buttons are correspond to expected.
+4.6. Test is passed.
+
+5.1 151220171847
+5.2 After clicking on the section of "Young Scientists League" result html page should contains 6 pictures.
+5.3 User clicks on the section "Young Scientists League" and sees on the result html page 6 pictures.
+5.4 Expected 6 pictures on the result html page.
+5.5 Actual count pictures correspond to expected.
+5.6 Test is passed.
+
+5.1 151220171925
+5.2 After clicking on the section of "About the institute" user wil be redirected to the '/about' url path.
+5.3 User clicks on the section "About the institute" and sees url path with domen + '/about'.
+5.4 Expected relative path is '/about'.
+5.5 Actual relative path is '/about'.
+5.6 Test is passed.
+
 
 ## 12. Remaining test tasks
 - Testing of sections: Contacts, Conferences, Publications, Site Map
@@ -91,6 +140,7 @@ Test cases:
 - Selecting features to be tested and not tested
 - Setting overall strategy for this level of plan
 - Ensuring all requred elements are in place for testing
+
 ## 16. Schedule
 - 10.12.2017 - 14.12.2017 - implementing tests for server side app
 - 15.12.2017 - 18.12.2017 - implementing tests for client side app
@@ -102,8 +152,5 @@ Test cases:
 - Delays in training on the application and/or tools
 - Changes to the original requirements or designs
 
-## 18. Approvals
-Valentin Trusevich will approve the process as complete and allow the project to preceed to the next level
-
-## 19. Glossary
+## 18. Glossary
 - Glossary.md (https://github.com/Strelts0v/IPP-webapp/blob/master/Design%20and%20modeling/Glossary.md)
