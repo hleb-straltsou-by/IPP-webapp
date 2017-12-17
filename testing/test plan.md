@@ -82,9 +82,9 @@ Test results must be desribed by the following plan:
 5. Actual result
 6. Mark
 
-# Test cases:
+### Test cases:
 
-# 1 Governing body
+#### 1 Governing body
 
 1. 141220171257.
 2. After clicking on the section of "Framework of organization. Governing body" result html page should contains 6 persons.
@@ -93,7 +93,7 @@ Test results must be desribed by the following plan:
 5. Returned 6 pesons on the result html page.
 6. Test is passed.
 
-# 2 Direction of researches
+#### 2 Direction of researches
 
 1. 141220171305.
 2. After clicking on the section of "Direction of researches" result html page should contains 8 directions in block "Area of activities".
@@ -102,7 +102,7 @@ Test results must be desribed by the following plan:
 5. Returned 8 direction of researches on the result html page.
 6. Test is passed
 
-# 3 Social network groups
+#### 3 Social network groups
 
 1. 141220171330.
 2. After loading main page should contains 4 links to social network groups of university.
@@ -111,7 +111,7 @@ Test results must be desribed by the following plan:
 5. Actual links are correspond to expected.
 6. Test is passed.
 
-# 4 Buttons for changing language
+#### 4 Buttons for changing language
 
 1. 141220171350.
 2. After loading main page should contains 2 buttons for changing page language: Ru, Eng.
@@ -120,7 +120,7 @@ Test results must be desribed by the following plan:
 5. Actual buttons are correspond to expected.
 6. Test is passed.
 
-# 5 Pictures in 'Young Scientists League' section
+#### 5 Pictures in 'Young Scientists League' section
 
 1. 151220171847
 2. After clicking on the section of "Young Scientists League" result html page should contains 6 pictures.
@@ -129,7 +129,7 @@ Test results must be desribed by the following plan:
 5. Actual count pictures correspond to expected.
 6. Test is passed.
 
-# 6 Relative path in 'About the institute' section
+#### 6 Relative path in 'About the institute' section
 
 1. 151220171925
 2. After clicking on the section of "About the institute" user wil be redirected to the '/about' url path.
@@ -138,7 +138,7 @@ Test results must be desribed by the following plan:
 5. Actual relative path is '/about'.
 6. Test is passed.
 
-# 7 Getting all publications from server API
+#### 7 Getting all publications from server API
 
 1. 161220172147.
 2. Rest request for getting publications return all publications in JSON format.
@@ -147,7 +147,7 @@ Test results must be desribed by the following plan:
 5. Returned 8 publicatons without count param.
 6. Test is passed
 
-# 8 Getting publication by id from server API
+#### 8 Getting publication by id from server API
 
 1. 161220172204.
 2. Rest request for getting publication by id return correspont publication in JSON format.
